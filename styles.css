@@ -1,13 +1,23 @@
 :root {
     --color-primary: #44f6fd;
+    --color-accent: #fffffa;
+    --color-default: #363636;
+
     --color-background: #242424;
-    --color-text: #f9f9f9;
     --color-card: #1b1b1b;
+
+    --color-text: #f9f9f9;
     --color-label: #aaaaaa;
+    --color-disabled: #888888;
+
+    --length-md1: 1rem;
+    --length-md2: 1.25rem;
+    --length-md3: 1.5rem;
 }
 
 
 body {
+    margin: 0;
     font-family: 'Poppins', Arial, sans-serif;
     background: var(--color-background);
     color: var(--color-text);
@@ -18,16 +28,27 @@ h1, h2, h3, h4, h5, h6 {
     line-height: 1;
 }
 
+.container{
+    
+    padding: 1rem;
+    
+}
+
+@media only screen and (min-width: 768px){
+    .container{
+        width: 900px;
+        margin: 0 auto;
+    }
+}
+
 .row {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
+    margin-bottom: var(--length-md1);
 }
 
 .card{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    width: 200px;
+    
     padding: 1rem;
     background: var(--color-card);
     border-radius: 1rem;
@@ -39,18 +60,84 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-label);
 }
 
-.card-h2 {
-    font-size: 2rem;
+.card-h3 {
+    margin-bottom: var(--length-md1);
+    color: var(--color-label);
+    font-size: 1rem;
     font-weight: 500;
 }
 
-.card-icon {
+.card-h2 {
+    font-size: 1.75rem;
+    font-weight: 500;
+}
+
+.card-headline-icon {
     display: grid;
     place-items: center;
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
     border-radius: 50%;
     color: var(--color-primary);
     font-size: 2rem;
     background: rgba(255, 255, 255, 0.1);
+}
+
+.card-headline{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.card-list{
+    display: flex;
+    gap: 1.75rem;
+    width: 50%;
+}
+
+.card-list-item{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.card-list-badge{
+    width: 0.75rem;
+    height: 0.75rem;
+    border-radius: 50%;
+    background: var(--color-primary);
+}
+
+.card-list-badge.primary{
+    background: var(--color-primary);
+}
+
+.card-list-badge.accent{
+    background: var(--color-accent);
+}
+
+.card-list-badge.default{
+    background: var(--color-default);
+}
+
+/* card progress */
+
+.card-progress {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-progress-donut{
+    position: relative;
+    width: 8rem;
+    height: 8rem;
+    border-radius: 50%;
+    background: conic-gradient(
+        var(--color-primary) 0% 33%,
+        var(--color-default) 33% 100%
+     );
 }
