@@ -48,10 +48,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .card{
-    
+    flex-grow: 1;
     padding: 1rem;
     background: var(--color-card);
     border-radius: 1rem;
+}
+
+.card.has-extra-padding {
+    padding: 2rem 1.5rem;
 }
 
 .card-h4 {
@@ -95,6 +99,11 @@ h1, h2, h3, h4, h5, h6 {
 .card-bar-chart > div > div{
     width: 1.25rem;
 }
+
+.card-bar-chart.is-gauge-chart > div > div{
+    width: 3rem;
+}
+
 
 .card-bar-primary{
     background: var(--color-primary);
@@ -163,7 +172,7 @@ h1, h2, h3, h4, h5, h6 {
 /* card progress */
 
 .card-progress {
-    padding: 1.5rem;
+   
     width: 20%;
     text-align: center;
 }
@@ -197,10 +206,19 @@ h1, h2, h3, h4, h5, h6 {
 .card-growth{
     width: 50%;
     text-align: center;
-    padding: 1.5rem;
+   
 }
 
 .card-growth-headlines{
     display: flex;
     justify-content: space-evenly;
+}
+
+
+/* regions */
+
+.card-regions {
+    width: 25%;
+    
+    text-align: center;
 }
