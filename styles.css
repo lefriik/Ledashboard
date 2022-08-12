@@ -58,6 +58,12 @@ h1, h2, h3, h4, h5, h6 {
     padding: 2rem 1.5rem;
 }
 
+.card-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .card-h4 {
     margin-bottom: 4px;
     font-size: 0.75rem;
@@ -69,6 +75,10 @@ h1, h2, h3, h4, h5, h6 {
     color: var(--color-label);
     font-size: 1rem;
     font-weight: 500;
+}
+
+.card-h3.no-bottom-margin{
+    margin-bottom: 0;
 }
 
 .card-h2 {
