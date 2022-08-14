@@ -136,7 +136,20 @@ h1, h2, h3, h4, h5, h6 {
     
 }
 .avatar-list > li{
+    display: flex;
+    margin-bottom: var(--length-md1);
+}
 
+.avatar{
+    width: 4rem;
+    height: 4rem;
+}
+
+
+.avatar-title,
+.avatar-notes{
+    display: block;
+    line-height: 1;
 }
 
 
