@@ -130,6 +130,15 @@ h1, h2, h3, h4, h5, h6 {
     width: 10px;
 }
 
+.avatar-list{
+    list-style: none;
+    padding: 0;
+    
+}
+.avatar-list > li{
+
+}
+
 
 
 /* card headline */
